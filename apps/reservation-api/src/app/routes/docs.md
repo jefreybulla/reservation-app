@@ -100,11 +100,15 @@ Body:
 
 ### Response Example
 ```
-{
-  "reservationId": 1,
-  "tableId": 101,
-  "userId": 1,
-  "reservationDateTime": "2023-10-01T19:00:00Z"
+{  
+  message: 'Your reservation is confirmed', 
+  confirmedReservation:
+  {
+    "reservationId": 1,
+    "tableId": 101,
+    "userId": 1,
+    "reservationDateTime": "2023-10-01T19:00:00Z"
+  }
 }
 ```
 

@@ -47,6 +47,6 @@ export default async function (fastify: FastifyInstance) {
       }
     })
 
-    return { message: 'you created a reservation', confirmedReservation: reservation }
+    return { message: 'Your reservation is confirmed', confirmedReservation: reservation }
   })
 }
