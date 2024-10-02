@@ -62,7 +62,7 @@ Restaurant(array): A list of restaurants that match the criteria
 
 
 
-## Restaurants API Endpoint
+## Reservations API Endpoint
 
 ### URL
 `/api/reservations`
@@ -79,6 +79,11 @@ Restaurant(array): A list of restaurants that match the criteria
 This endpoint creates a new reservation for a specified table, user, and reservation date and time.
 
 ### Request Example
+```http
+POST /restaurants
+```
+
+Body:
 ```
 {
   "tableId": 101,

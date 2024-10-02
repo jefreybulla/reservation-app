@@ -4,8 +4,9 @@ This api allows has the following two features
     - Make restaurant reservations
 
 ## Key files
-- restaurant.ts: endpoint to retrieve available restaurants
-- reservations.ts: endpoint to make a reservation
+- [API documentation](apps/reservation-api/src/app/routes/docs.md)
+- [restaurant.ts](apps/reservation-api/src/app/routes/restaurants.ts): endpoint to retrieve available restaurants
+- [reservations.ts](apps/reservation-api/src/app/routes/reservations.ts): endpoint to make a reservation
 
 ## Development setuo
 ### Requirements
