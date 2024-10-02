@@ -1,22 +1,8 @@
-
-/*
-endpoint to create a reservation
-
-POST /reservations
-body {
-  tableId:
-  userId
-  reservationDateTime:
-}
-*/
-
-
 import { FastifyInstance } from 'fastify'
 import { Static, Type } from '@sinclair/typebox'
 import { PrismaClient } from '@prisma/client'
 
 import { DateTime, Duration } from 'luxon'
-
 
 let revervationDuration = Duration.fromObject({ hours: 2 })
 

@@ -14,16 +14,6 @@ const RestaurantSearchSchema = Type.Object({
 
 type RestaurantSearchType = Static<typeof RestaurantSearchSchema>
 
-  /*TO-DO: add search enpoint
-  GET /restaurants/reservation-datetime:XYZ&diet=vegan&diet=paleo
-  response {
-    restaurants[]
-    diet[]
-    availableTime DateTime
-  }
-  include types and validation using typebox
-  */
-
 export default async function (fastify: FastifyInstance) {
   fastify.get<{ Querystring: RestaurantSearchType }>
   ('/restaurants',
@@ -71,14 +61,3 @@ export default async function (fastify: FastifyInstance) {
   })
 
 }
-
-
-/*
-# Availability calculator
-For every restaurant that fit criteria
-  for every table in restaurant that has desired capacity or greater
-    if no reservation related to this table in the desired time - 2 hours window
-      Example: reservation at 6PM. Check if there is a reservation between 4PM and 8PM
-      add this restaurant to response array
-      break
-*/
