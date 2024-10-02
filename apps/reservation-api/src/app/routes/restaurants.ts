@@ -7,7 +7,7 @@ const prisma = new PrismaClient()
 let revervationDuration = Duration.fromObject({ hours: 2 })
 
 const RestaurantSearchSchema = Type.Object({
-  reservationDateTime:  Type.Optional(Type.String({ format: 'date-time' })),
+  reservationDateTime:  Type.String({ format: 'date-time' }),
   diet: Type.Optional(Type.Array(Type.String())),
   partySize: Type.Integer({ minimum: 1 })
 })
