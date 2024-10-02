@@ -8,6 +8,7 @@
     "@fastify/autoload": "~5.7.1",
     "@fastify/sensible": "~5.2.0",
     "@prisma/client": "^5.20.0",
+    "@sinclair/typebox": "^0.33.12",
     "axios": "^1.6.0",
     "fastify": "~4.13.0",
     "fastify-plugin": "~4.5.0",
