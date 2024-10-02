@@ -11,7 +11,7 @@ This api has the following features:
 
 ## Development setup
 ### Requirements
-- Postgres
+- PostgreSQL
 - Node JS (Install version specified in file `.nvmrc`)
 
 ### Database setup
