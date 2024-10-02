@@ -1,5 +1,5 @@
 # ReservationApp
-This api allows has the following two features
+This api has the following two features
     - Find restaurants with available tables 
     - Make restaurant reservations
 
