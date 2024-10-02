@@ -18,7 +18,7 @@ This endpoint retrieves a list of restaurants that have available tables for the
 
 ### Request Example
 ```http
-GET /restaurants?reservationDateTime=2023-10-01T19:00:00Z&diet=vegan,gluten-free&partySize=4
+GET /restaurants?reservationDateTime=2024-12-24 18:00:00.000&diet=vegan&diet=paleo&partySize=2
 ```
 
 ### Response
