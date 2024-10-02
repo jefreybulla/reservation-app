@@ -12,6 +12,7 @@
     "axios": "^1.6.0",
     "fastify": "~4.13.0",
     "fastify-plugin": "~4.5.0",
+    "luxon": "^3.5.0",
     "prisma": "^5.20.0"
   },
   "devDependencies": {

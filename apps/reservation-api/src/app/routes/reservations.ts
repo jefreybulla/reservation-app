@@ -15,6 +15,11 @@ import { FastifyInstance } from 'fastify'
 import { Static, Type } from '@sinclair/typebox'
 import { PrismaClient } from '@prisma/client'
 
+import { DateTime, Duration } from 'luxon'
+
+
+let revervationDuration = Duration.fromObject({ hours: 2 })
+
 const prisma = new PrismaClient()
 
 const ReservationSchema = Type.Object({
@@ -32,12 +37,21 @@ export default async function (fastify: FastifyInstance) {
     }
   }, async function (request, reply) {
     const { tableId, userId, reservationDateTime } = request.body
-    console.log('tableId ->')
-    console.log(tableId)
-    console.log('userId ->')
-    console.log(userId)
-    console.log('reservationDateTime ->')
-    console.log(reservationDateTime)
+    const dt = DateTime.fromISO(new Date(reservationDateTime).toISOString())
+
+    // First check if there is a reservation for that table at that time
+    const existingReservation = await prisma.reservation.findFirst({
+      where: {
+        tableId,
+        dateTime: {
+            lte: dt.plus(revervationDuration).toISO(),
+            gte: dt.minus(revervationDuration).toISO()
+        }
+      }
+    })
+    if (existingReservation) {
+      return reply.code(400).send({ message: 'reservation conflict for the requested table' })
+    }
 
     const reservation = await prisma.reservation.create({
       data: {
@@ -46,8 +60,7 @@ export default async function (fastify: FastifyInstance) {
         dateTime: new Date(reservationDateTime)
       }
     })
-    console.log(`created a reservation ->`)
-    console.log(reservation)
-    return { message: 'you created a reservation' }
+
+    return { message: 'you created a reservation', confirmedReservation: reservation }
   })
 }
