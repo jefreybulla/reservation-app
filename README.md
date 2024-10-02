@@ -1,7 +1,7 @@
 # ReservationApp
-This api has the following two features
-    - Find restaurants with available tables 
-    - Make restaurant reservations
+This api has the following features:
+- Find restaurants with available tables 
+- Make a table reservation at a restaurant
 
 ## Key files
 - [API documentation](apps/reservation-api/src/app/routes/docs.md)
