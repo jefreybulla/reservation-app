@@ -7,7 +7,7 @@ This api has the following features:
 - [API documentation](apps/reservation-api/src/app/routes/docs.md)
 - [restaurants.ts](apps/reservation-api/src/app/routes/restaurants.ts). Endpoint to retrieve available restaurants
 - [reservations.ts](apps/reservation-api/src/app/routes/reservations.ts). Endpoint to make a reservation
-- [Data model](apps/reservation-api/src/app/prisma/schema.prisma). Data model shcema. 
+- [Data model](apps/reservation-api/src/app/prisma/schema.prisma).
 
 ## Development setup
 ### Requirements
@@ -15,7 +15,7 @@ This api has the following features:
 - Node JS (Install version specified in file `.nvmrc`)
 
 ### Database setup
-Create a postgres database with
+Create a postgreSQL database with
 ```
 createdb restaurant_reservation_app
 ```
