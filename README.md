@@ -5,8 +5,9 @@ This api has the following features:
 
 ## Key files
 - [API documentation](apps/reservation-api/src/app/routes/docs.md)
-- [restaurants.ts](apps/reservation-api/src/app/routes/restaurants.ts) -> endpoint to retrieve available restaurants
-- [reservations.ts](apps/reservation-api/src/app/routes/reservations.ts) -> endpoint to make a reservation
+- [restaurants.ts](apps/reservation-api/src/app/routes/restaurants.ts). Endpoint to retrieve available restaurants
+- [reservations.ts](apps/reservation-api/src/app/routes/reservations.ts). Endpoint to make a reservation
+- [Data model](apps/reservation-api/src/app/prisma/schema.prisma). Data model shcema. 
 
 ## Development setup
 ### Requirements
