@@ -14,13 +14,7 @@ export default async function (fastify: FastifyInstance) {
     const restaurant = await prisma.restaurant.create({
       data: {
         name: 'The Butchers daughter',
-        endorsements: {
-          create: [
-            { name: "VEGAN" },
-            { name: "VEGETARIAN" },
-            { name: "PALEO" },
-          ],
-        },
+        endorsements: ['vegan'],
         tables: {
           create: [
             { capacity: 2},
