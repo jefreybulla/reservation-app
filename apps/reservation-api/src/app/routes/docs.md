@@ -3,7 +3,7 @@
 ## Restaurants API Endpoint
 
 ### URL
-`/api/restaurants`
+`/restaurants`
 
 ### Method
 `GET`
@@ -18,7 +18,7 @@ This endpoint retrieves a list of restaurants that have available tables for the
 
 ### Request Example
 ```http
-GET /api/restaurants?reservationDateTime=2023-10-01T19:00:00Z&diet=vegan,gluten-free&partySize=4
+GET /restaurants?reservationDateTime=2023-10-01T19:00:00Z&diet=vegan,gluten-free&partySize=4
 ```
 
 ### Response
@@ -65,7 +65,7 @@ Restaurant(array): A list of restaurants that match the criteria
 ## Reservations API Endpoint
 
 ### URL
-`/api/reservations`
+`/reservations`
 
 ### Method
 `POST`
