@@ -80,7 +80,7 @@ This endpoint creates a new reservation for a specified table, user, and reserva
 
 ### Request Example
 ```http
-POST /restaurants
+POST /reservations
 ```
 
 Body:
