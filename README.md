@@ -5,10 +5,10 @@ This api allows has the following two features
 
 ## Key files
 - [API documentation](apps/reservation-api/src/app/routes/docs.md)
-- [restaurant.ts](apps/reservation-api/src/app/routes/restaurants.ts): endpoint to retrieve available restaurants
-- [reservations.ts](apps/reservation-api/src/app/routes/reservations.ts): endpoint to make a reservation
+- [restaurant.ts](apps/reservation-api/src/app/routes/restaurants.ts) -> endpoint to retrieve available restaurants
+- [reservations.ts](apps/reservation-api/src/app/routes/reservations.ts) -> endpoint to make a reservation
 
-## Development setuo
+## Development setup
 ### Requirements
 - Postgres
 - Node JS (Install version specified in file `.nvmrc`)
@@ -23,7 +23,7 @@ In the project roor create an .env file with your database credentials. Example:
 DATABASE_URL="postgresql://<your_user_name>:<your_password>@localhost:5432/restaurant_reservation_app?schema=public"
 ```
 
-### Install
+### Install dependencies
 ```
 npm install
 ```
