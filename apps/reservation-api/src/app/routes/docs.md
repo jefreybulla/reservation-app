@@ -10,7 +10,7 @@
 
 ### Query Parameters
 - `reservationDateTime` (string, required): The desired reservation date and time in ISO 8601 format.
-- `diet` (array of strings, optional): A list of dietary endorsements required by the restaurant.
+- `diet` (array of strings, optional): A list of dietary restrictions.
 - `partySize` (number, required): The number of people in the party.
 
 ### Description
@@ -31,24 +31,22 @@ Restaurant(array): A list of restaurants that match the criteria
     {
       "id": 1,
       "name": "Healthy Eats",
-      "endorsements": ["vegan", "gluten-free"],
+      "endorsements": ["vegan", "paleo"],
       "tables": [
         {
           "id": 101,
           "capacity": 4,
-          "reservations": []
         }
       ]
     },
     {
       "id": 2,
       "name": "Green Bistro",
-      "endorsements": ["vegan"],
+      "endorsements": ["vegan", "paleo"],
       "tables": [
         {
           "id": 102,
           "capacity": 6,
-          "reservations": []
         }
       ]
     }
@@ -59,7 +57,6 @@ Restaurant(array): A list of restaurants that match the criteria
 ### Error handling
 - If reservationDateTime or partySize is missing, the endpoint will return a 400 Bad Request error.
 - If no restaurants match the criteria, the endpoint will return an empty array in the restaurants field.
-
 
 
 ## Reservations API Endpoint
@@ -88,7 +85,7 @@ Body:
 {
   "tableId": 101,
   "userId": 1,
-  "reservationDateTime": "2023-10-01T19:00:00Z"
+  "reservationDateTime": "2024-12-24 18:00:00.000"
 }
 ```
 
@@ -107,7 +104,7 @@ Body:
     "reservationId": 1,
     "tableId": 101,
     "userId": 1,
-    "reservationDateTime": "2023-10-01T19:00:00Z"
+    "reservationDateTime": "2024-12-24 18:00:00.000"
   }
 }
 ```
