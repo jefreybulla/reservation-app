@@ -26,15 +26,15 @@ export default async function (fastify: FastifyInstance) {
     const { reservationDateTime, diet, partySize } = request.query
     const dt = DateTime.fromISO(new Date(reservationDateTime).toISOString())
 
-    let dietArray = []
+    let dietaryRestrictions = []
     if (diet) {
-      dietArray = diet
+      dietaryRestrictions = diet
     }
     // find restaurants that match all the required dietary restrictions
     const restaurants = await prisma.restaurant.findMany({
       where: {
         endorsements: {
-          hasEvery: dietArray
+          hasEvery: dietaryRestrictions
         },
       },
       include: {
