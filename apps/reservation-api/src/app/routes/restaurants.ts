@@ -30,20 +30,21 @@ export default async function (fastify: FastifyInstance) {
     if (diet) {
       dietArray = diet
     }
-    // find restaurants with aviailable tables
+    // find restaurants that match all the required dietary restrictions
     const restaurants = await prisma.restaurant.findMany({
       where: {
         endorsements: {
           hasEvery: dietArray
         },
       },
-      // include tables that have no reservations in the desired time window
       include: {
         tables: {
           where: {
+            // include tables with capacity greater or equal than the party size 
             capacity: {
               gte: partySize
             },
+            // include tables that have no reservations in the desired time window
             reservations: {
               none: {
                 dateTime: {
