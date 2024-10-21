@@ -1,5 +1,8 @@
-# ReservationApp
-This api has the following features:
+# ReservationApp - Coding challenge
+Build an API to make a restaurant reservation based on number of diners and dietary restrictions. See the full challenge description [here](take-home.md)
+
+## Features
+This API has the following features:
 - Find restaurants with available tables 
 - Make a table reservation at a restaurant
 
